@@ -1,0 +1,26 @@
+/* Main parent container styling */
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+  /* Dark background for a techy look */
+  color: #e0e0e0;
+}
+
+body {
+  background-color: #121212;
+}
+
+/* Optional subtle background gradient */
+.app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #121212);
+  opacity: 0.8;
+  z-index: -1;
+}
