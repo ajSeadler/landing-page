@@ -3,7 +3,7 @@ import "../styles/About.css";
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <h2 className="about-title">About Me</h2>
       <div className="about-content">
         <p>
@@ -15,8 +15,8 @@ const About = () => {
           with a strong focus on security.
         </p>
         <p>
-          With experience in backend and frontend technologies, I bring a keen
-          eye for design and functionality, aiming to make UX as seamless as
+          With experience in backend and frontend practices, I bring a keen eye
+          for design and functionality, aiming to make UX as friendly as
           possible. Take a look at some of my projects below!
         </p>
       </div>

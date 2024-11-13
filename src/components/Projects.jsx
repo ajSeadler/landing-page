@@ -5,7 +5,7 @@ const projects = [
   {
     title: "SkateTracker",
     description:
-      "This full-stack application allows users to sign up and create profiles where they can add tricks from a central tricks database. Users can track their progress, marking tricks as either mastered or still learning, earning points for mastering tricks and keeping a detailed record of all their activities. Users may also set personalized goals with target dates.",
+      "This full-stack application allows users to sign up and create profiles where they can add tricks from a Postgres database. Users can track their progress, marking tricks as either mastered or still learning, earning points for mastering tricks and keeping a detailed record of all their activities. Users may also set personalized goals with target dates.",
     techStack: ["React", "Node.js", "Postgres", "Express.js"],
     image: "profile.png", // Replace with actual image paths
     liveLink: "https://example.com",
@@ -33,7 +33,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <h2 className="section-title">My Projects</h2>
       <div className="projects-list">
         {projects.map((project, index) => (

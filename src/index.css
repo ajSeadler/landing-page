@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  scroll-behavior: smooth;
+  cursor: url('/tech-cursor.svg') 16 16, auto;
 }
+
+
 
 .button {
   display: flex;
@@ -22,4 +26,10 @@
   background-color: #000;
   color: #fff;
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .button {
+    padding: .5rem !important;
+  }
 }

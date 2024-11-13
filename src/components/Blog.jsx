@@ -10,7 +10,7 @@ const blogPosts = []; // Set to empty to test the no-posts message
 
 const Blog = () => {
   return (
-    <section className="blog">
+    <section className="blog" id="blog">
       <h2 className="section-title">Blog</h2>
       <div className="blog-list">
         {blogPosts.length > 0 ? (

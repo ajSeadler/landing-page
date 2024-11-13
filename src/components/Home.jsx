@@ -1,4 +1,3 @@
-import NavBar from "./NavBar";
 import HeroSection from "./HeroSection";
 import About from "./About";
 import Projects from "./Projects";
@@ -10,7 +9,6 @@ export default function Home() {
   return (
     <>
       <div className="home">
-        <NavBar />
         <HeroSection />
         <About />
         <Projects />

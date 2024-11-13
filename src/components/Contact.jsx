@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "../styles/Contact.css";
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 import emailjs from "emailjs-com";
 import LoadingSpinner from "./LoadingSpinner";
 
@@ -105,6 +107,9 @@ function Contact() {
             />
           </div>
           <button type="submit" className="submit-button">
+            <div className="icon2">
+              <FaExternalLinkAlt />
+            </div>
             {isSending ? (
               <LoadingSpinner />
             ) : submitted ? (

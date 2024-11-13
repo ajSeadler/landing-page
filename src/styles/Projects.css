@@ -27,7 +27,7 @@
   flex-direction: column;
   justify-content: space-between;
   /* background-color: #1a1a1a; */
-  border: 2px solid grey;
+  border: 3px solid grey;
   border-radius: 20px;
   overflow: hidden;
   /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); */
@@ -90,7 +90,7 @@
 }
 
 .tech:hover {
-  background-color: #00ccff;
+  background-color: rgb(96, 0, 181);
 }
 
 .project-buttons {
@@ -113,8 +113,17 @@
     width: 100%;
   }
 
+  .project-title {
+    font-size: 1.4rem;
+  }
+
   .button {
     padding: .6rem;
+    font-size: .8rem;
+  }
+
+  .section-title {
+    font-size: 2rem !important;
   }
 
   .project-description {

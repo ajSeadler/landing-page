@@ -3,9 +3,9 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 90vw;
+  max-width: 75vw;
   margin: auto;
-  padding: 2rem;
+  padding: 2rem 2rem 0;
   position: sticky;
   top: 0;
   background-color: rgba(18, 18, 18, 0.9);
@@ -27,6 +27,7 @@
   display: flex;
   list-style: none;
   gap: 2rem;
+  padding-bottom: 1%;
 }
 
 /* For smaller screens, reduce gap and font size */
@@ -35,6 +36,8 @@
   .navbar {
     margin: auto;
     justify-content: center;
+    width: 100vw !important;
+    max-width: 100%;
     padding: 2rem !important;
   }
 
