@@ -10,7 +10,7 @@ export default function NavBar() {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY.current) {
         // Scrolling down
-        setIsVisible(true); //keep this as true until animation doesnt happen on mobile. animation should only happen on desktop
+        setIsVisible(false); //keep this as true until animation doesnt happen on mobile. animation should only happen on desktop
       } else {
         // Scrolling up
         setIsVisible(true);
