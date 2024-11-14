@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import "../styles/Projects.css";
 
@@ -15,7 +16,7 @@ const projects = [
     title: "Disco Stranger Music",
     description:
       "The website is the official platform for my band, Disco Stranger, featuring a vibrant parallax design with a merch section and a booking form. Built with JavaScript, React, and CSS, venues can easily send us gig requests through the website, while fans can explore our latest releases and browse merchandise directly from the site.",
-    techStack: ["React", "Javacript", "CSS"],
+    techStack: ["React", "JavaScript", "CSS"],
     image: "/ds-site.png", // Replace with actual image paths
     liveLink: "https://discostrangermusic.com",
     repoLink: "https://github.com/username/project2",
@@ -32,48 +33,82 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [expanded, setExpanded] = useState(Array(projects.length).fill(false));
+
+  const toggleReadMore = (index) => {
+    setExpanded((prev) => prev.map((item, i) => (i === index ? !item : item)));
+  };
+
   return (
     <section className="projects" id="projects">
       <h2 className="section-title">My Projects</h2>
       <div className="projects-list">
-        {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="project-image"
-            />
-            <div className="project-details">
-              <h3 className="project-title">{project.title}</h3>
-              <p className="project-description">{project.description}</p>
-              <div className="tech-stack">
-                {project.techStack.map((tech, i) => (
-                  <span key={i} className="tech">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="project-buttons">
-                <a
-                  href={project.liveLink}
-                  className="button live-button"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaExternalLinkAlt /> Visit Website
-                </a>
-                <a
-                  href={project.repoLink}
-                  className="button repo-button"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub /> View Repo
-                </a>
+        {projects.map((project, index) => {
+          const isExpanded = expanded[index];
+          const previewTextLength = Math.floor(
+            project.description.length * 0.4
+          );
+          const displayedText = isExpanded
+            ? project.description
+            : `${project.description.slice(0, previewTextLength)}...`;
+
+          return (
+            <div key={index} className="project-card">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image"
+              />
+              <div className="project-details">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">
+                  {displayedText}
+                  {!isExpanded && (
+                    <span
+                      className="read-more"
+                      onClick={() => toggleReadMore(index)}
+                    >
+                      Read more
+                    </span>
+                  )}
+                  {isExpanded && (
+                    <span
+                      className="read-less"
+                      onClick={() => toggleReadMore(index)}
+                    >
+                      Show less
+                    </span>
+                  )}
+                </p>
+                <div className="tech-stack">
+                  {project.techStack.map((tech, i) => (
+                    <span key={i} className="tech">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="project-buttons">
+                  <a
+                    href={project.liveLink}
+                    className="button live-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaExternalLinkAlt /> Visit Website
+                  </a>
+                  <a
+                    href={project.repoLink}
+                    className="button repo-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub /> View Repo
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
