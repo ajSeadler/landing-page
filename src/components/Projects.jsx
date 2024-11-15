@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai"; // X icon
 import "../styles/Projects.css";
 
 const projects = [
@@ -9,8 +10,8 @@ const projects = [
       "This full-stack application allows users to sign up and create profiles where they can add tricks from a Postgres database. Users can track their progress, marking tricks as either mastered or still learning, earning points for mastering tricks and keeping a detailed record of all their activities. Users may also set personalized goals with target dates.",
     techStack: ["React", "Node.js", "Postgres", "Express.js"],
     image: "/skate-tracker.png", // Replace with actual image paths
-    liveLink: "https://example.com",
-    repoLink: "https://github.com/username/project3",
+    liveLink: "https://github.com/ajSeadler/SkateTracker",
+    repoLink: "https://github.com/ajSeadler/SkateTracker",
   },
   {
     title: "Disco Stranger Music",
@@ -19,7 +20,7 @@ const projects = [
     techStack: ["React", "JavaScript", "CSS"],
     image: "/ds-site.png", // Replace with actual image paths
     liveLink: "https://discostrangermusic.com",
-    repoLink: "https://github.com/username/project2",
+    repoLink: "https://github.com/ajSeadler/band-website",
   },
   {
     title: "Circle of Fifths Viewer",
@@ -28,15 +29,24 @@ const projects = [
     techStack: ["JavaScript", "React.js", "CSS", "Mobile-Friendly"],
     image: "/cof.png", // Replace with actual image paths
     liveLink: "https://circleoffifthsviewer.com",
-    repoLink: "https://github.com/username/project1",
+    repoLink: "https://github.com/ajSeadler/scale-viewer",
   },
 ];
 
 const Projects = () => {
   const [expanded, setExpanded] = useState(Array(projects.length).fill(false));
+  const [largeImage, setLargeImage] = useState(null);
 
   const toggleReadMore = (index) => {
     setExpanded((prev) => prev.map((item, i) => (i === index ? !item : item)));
+  };
+
+  const openLargeView = (image) => {
+    setLargeImage(image);
+  };
+
+  const closeLargeView = () => {
+    setLargeImage(null);
   };
 
   return (
@@ -58,6 +68,7 @@ const Projects = () => {
                 src={project.image}
                 alt={project.title}
                 className="project-image"
+                onClick={() => openLargeView(project.image)} // Click on image
               />
               <div className="project-details">
                 <h3 className="project-title">{project.title}</h3>
@@ -66,7 +77,10 @@ const Projects = () => {
                   {!isExpanded && (
                     <span
                       className="read-more"
-                      onClick={() => toggleReadMore(index)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleReadMore(index);
+                      }}
                     >
                       Read more
                     </span>
@@ -74,7 +88,10 @@ const Projects = () => {
                   {isExpanded && (
                     <span
                       className="read-less"
-                      onClick={() => toggleReadMore(index)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleReadMore(index);
+                      }}
                     >
                       Show less
                     </span>
@@ -110,6 +127,16 @@ const Projects = () => {
           );
         })}
       </div>
+
+      {largeImage && (
+        <div className="large-image-view">
+          <div className="overlay" onClick={closeLargeView}></div>
+          <div className="large-image-container">
+            <img src={largeImage} alt="Large view" />
+            <AiOutlineClose className="close-icon" onClick={closeLargeView} />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
