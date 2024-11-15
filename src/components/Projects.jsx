@@ -8,7 +8,7 @@ const projects = [
     description:
       "This full-stack application allows users to sign up and create profiles where they can add tricks from a Postgres database. Users can track their progress, marking tricks as either mastered or still learning, earning points for mastering tricks and keeping a detailed record of all their activities. Users may also set personalized goals with target dates.",
     techStack: ["React", "Node.js", "Postgres", "Express.js"],
-    image: "profile.png", // Replace with actual image paths
+    image: "/skate-tracker.png", // Replace with actual image paths
     liveLink: "https://example.com",
     repoLink: "https://github.com/username/project3",
   },
