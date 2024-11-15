@@ -97,7 +97,7 @@ small {
 .button {
   display: flex;
   align-items: center;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem;
   background-color: transparent;
   color: #d9ff00;
   border: solid 2px #d9ff00;
