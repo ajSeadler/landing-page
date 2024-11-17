@@ -1,4 +1,4 @@
-import { FaJs, FaReact, FaNodeJs, FaPython } from "react-icons/fa";
+import { FaJs, FaReact, FaNodeJs, FaPython, FaLinux } from "react-icons/fa";
 import { SiPostgresql, SiExpress, SiSqlite } from "react-icons/si";
 import "../styles/HeroSection.css";
 
@@ -31,6 +31,9 @@ export default function HeroSection() {
           </span>
           <span className="skill">
             <SiExpress className="icon" /> Express.js
+          </span>
+          <span className="skill">
+            <FaLinux className="icon" /> Linux OS
           </span>
         </div>
       </div>
