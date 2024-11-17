@@ -1,0 +1,142 @@
+/* Main container styles */
+.timeline-container {
+  display: flex;
+  height: 50vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  color: #eaeaea;
+}
+
+/* Sidebar styles */
+.timeline-sidebar {
+  position: sticky;
+  top: 0;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.timeline-line {
+  position: relative;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #2d2d44, #4a4a7d);
+}
+
+/* Nodes for dates */
+.timeline-node {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 50px 0;
+  left: -12px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline-icon {
+  font-size: 2rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.timeline-node:hover {
+  transform: scale(1.2);
+}
+
+.timeline-node.active .timeline-icon {
+  color: #d9ff00;
+}
+
+.timeline-node.active {
+  transform: scale(1.2);
+}
+
+.timeline-node .timeline-date {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  color: #eaeaea;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-node.active .timeline-date {
+  opacity: 1;
+}
+
+/* Content section styles */
+.timeline-content {
+  width: 70%;
+  padding: 2rem;
+}
+
+.timeline-section {
+  scroll-snap-align: center;
+  min-height: 100vh;
+  display: flex;
+  font-weight: bold;
+  flex-direction: row;
+  gap: 2%;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  padding: 2rem;
+}
+
+.timeline-image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  height: auto;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+
+}
+
+
+/* Adjust image size for smaller screens */
+@media (max-width: 768px) {
+
+  .timeline-section {
+    flex-direction: column;
+  }
+
+
+  .timeline-image {
+    max-width: 300px;
+    /* Reduce size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-image {
+    max-width: 300px;
+    /* Further reduce size for very small devices */
+  }
+}
+
+
+.timeline-section h3 {
+  font-size: 2rem;
+  color: #d9ff00;
+  ;
+}
+
+.timeline-section p {
+  color: #d1d1e0;
+  margin-top: 1rem;
+  width: 50%;
+  text-align: left;
+}
+
+@media (max-width: 1098px) {
+  .timeline-section p {
+    width: 100%;
+  }
+}

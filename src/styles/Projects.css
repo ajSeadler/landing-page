@@ -154,7 +154,7 @@
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 1098px) {
   .projects-list {
     flex-direction: row;
   }
