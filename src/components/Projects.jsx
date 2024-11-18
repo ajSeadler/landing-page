@@ -7,7 +7,7 @@ const projects = [
   {
     title: "SkateTracker",
     description:
-      "This full-stack application allows users to sign up and create profiles where they can add tricks from a Postgres database. Users can track their progress, marking tricks as either mastered or still learning, earning points for mastering tricks and keeping a detailed record of all their activities. Users may also set personalized goals with target dates.",
+      "This C.R.U.D. application allows users to sign up and create profiles where they can add tricks from a Postgres database. Users can track their progress, marking tricks as either mastered or still learning, earning points for mastering tricks and keeping a detailed record of all their activities. Users may also set personalized goals with target dates.",
     techStack: ["React", "Node.js", "Postgres", "Express.js"],
     image: "/skate-tracker.png", // Replace with actual image paths
     liveLink: "https://github.com/ajSeadler/SkateTracker",
@@ -16,7 +16,7 @@ const projects = [
   {
     title: "Disco Stranger Music",
     description:
-      "The website is the official platform for my band, Disco Stranger, featuring a vibrant parallax design with a merch section and a booking form. Built with JavaScript, React, and CSS, venues can easily send us gig requests through the website, while fans can explore our latest releases and browse merchandise directly from the site.",
+      "This website is the official platform for my band, Disco Stranger, featuring a vibrant parallax design with a merch section and a booking form. Built with JavaScript, React, and CSS, venues can easily send us gig requests through the website, while fans can explore our latest releases and browse merchandise directly from the site.",
     techStack: ["React", "JavaScript", "CSS"],
     image: "/ds-site.png", // Replace with actual image paths
     liveLink: "https://discostrangermusic.com",
