@@ -57,7 +57,7 @@
 }
 
 .skill:hover {
-  background-color: rgb(96, 0, 181);
+  background-color: #6000b5;
   color: #fff;
   transform: scale(1.05);
 }

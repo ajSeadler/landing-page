@@ -3,7 +3,7 @@
   display: flex;
   height: 50vh;
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory !important;
   color: #eaeaea;
 }
 
@@ -18,12 +18,16 @@
   padding: 2rem;
 }
 
+
+
 .timeline-line {
   position: relative;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, #2d2d44, #4a4a7d);
+  border-radius: 20px;
+  width: 6px;
+  background: linear-gradient(180deg, #a6a7a7, #525252);
+  box-shadow: 0 0 5px #6eb91d, 0 0 20px #d9ff00;
 }
+
 
 /* Nodes for dates */
 .timeline-node {
@@ -85,8 +89,15 @@
   gap: 2%;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #ddd;
   padding: 2rem;
+}
+
+.timeline-section p {
+  background-color: #414066;
+  width: auto !important;
+  border-radius: 20px;
+  padding: 1rem;
 }
 
 .timeline-image {
