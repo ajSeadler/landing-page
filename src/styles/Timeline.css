@@ -25,7 +25,6 @@
   border-radius: 20px;
   width: 6px;
   background: linear-gradient(180deg, #a6a7a7, #525252);
-  box-shadow: 0 0 5px #6eb91d, 0 0 20px #d9ff00;
 }
 
 
@@ -93,12 +92,6 @@
   padding: 2rem;
 }
 
-.timeline-section p {
-  background-color: #414066;
-  width: auto !important;
-  border-radius: 20px;
-  padding: 1rem;
-}
 
 .timeline-image {
   width: 100%;
