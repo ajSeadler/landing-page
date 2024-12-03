@@ -4,11 +4,11 @@
   align-items: center;
   width: 40%;
   margin: auto;
-  margin-top: 0%;
+  margin-top: 1%;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  border-radius: 0 0 30px 30px;
+  border-radius: 30px;
   background: linear-gradient(135deg, #1f1f1f 0%, #2e2e2e 100%);
   backdrop-filter: blur(5px);
   z-index: 1000;
@@ -63,19 +63,20 @@
 @media (max-width: 768px) {
   .navbar {
     width: 90%;
+    margin-top: 10px !important;
     padding: 1rem;
   }
 
   .nav-links {
-    gap: 1rem;
+    gap: 1rem !important;
   }
 
   .nav-item {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
   }
 
   .icon {
-    font-size: 1.4rem;
+    font-size: 1.5rem !important;
   }
 }
 
