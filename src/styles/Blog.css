@@ -1,5 +1,7 @@
 .blog {
-  padding: 4rem 2rem;
+  padding: 1rem;
+  width: 50%;
+  margin: auto;
   text-align: center;
   color: #fff;
 }
@@ -21,7 +23,7 @@
 .blog-card {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: auto !important;
   background-color: #1e1e1e;
   border-radius: 10px;
   overflow: hidden;
@@ -40,8 +42,8 @@
 }
 
 .blog-content {
-  padding: 1.5rem;
-  width: 80%;
+  padding: 1rem;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -51,7 +53,8 @@
 .blog-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #d9ff00;
+  color: #ddd !important;
+  text-align: left;
   margin-bottom: 0.5rem;
 }
 
@@ -79,17 +82,19 @@
 
 .read-button {
   background-color: transparent;
-  color: #d9ff00;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
+  color: #d9ff00 !important;
+  text-decoration: none !important;
+  padding: 1rem;
   border-radius: 50px;
   border: solid 2px #d9ff00;
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 10px;
   transition: background-color 0.3s ease;
 }
+
+
 
 .button:hover {
   background-color: rgb(96, 0, 181);
@@ -109,6 +114,7 @@
 .no-posts-message {
   text-align: center;
   border: solid 2px grey;
+  background: #0E1116;
   padding: 5%;
   border-radius: 20px;
   color: #aaa;
@@ -120,4 +126,10 @@
   font-size: 2rem;
   margin-bottom: 0.5rem;
   color: #ff6f61;
+}
+
+@media (max-width:798px) {
+  .blog {
+    width: 100%;
+  }
 }

@@ -1,12 +1,22 @@
-import {
-  FaCalendarAlt,
-  FaArrowRight,
-  FaShareAlt,
-  FaRegFrown,
-} from "react-icons/fa";
+import { Link } from "react-router-dom"; // Import Link for navigation
+import { FaCalendarAlt, FaArrowRight, FaRegFrown } from "react-icons/fa";
 import "../styles/Blog.css";
 
-const blogPosts = []; // Set to empty to test the no-posts message
+const blogPosts = [
+  // {
+  //   id: "getting-into-it", // Unique identifier for the blog post
+  //   image: "path-to-your-image.jpg",
+  //   title: "Getting Into IT: My Journey in Web Development and Cybersecurity",
+  //   date: "November 26, 2024",
+  //   excerpt:
+  //     "From my first lines of HTML to diving into pen testing with Python, here's how I got started in IT and the lessons I learned along the way.",
+  //   content: `
+  //     <p>Starting in IT was daunting, but it’s a field that rewards persistence...</p>
+  //     <p>My first encounter with programming was...</p>
+  //     <p>Here are some key takeaways...</p>
+  //   `, // Use a string or JSX for blog content
+  // },
+];
 
 const Blog = () => {
   return (
@@ -14,9 +24,10 @@ const Blog = () => {
       <h2 className="section-title">Blog</h2>
       <div className="blog-list">
         {blogPosts.length > 0 ? (
-          blogPosts.map((post, index) => (
-            <div key={index} className="blog-card">
-              <img src={post.image} alt={post.title} className="blog-image" />
+          blogPosts.map((post) => (
+            <div key={post.id} className="blog-card">
+              {/* Optionally uncomment if you have images */}
+              {/* <img src={post.image} alt={post.title} className="blog-image" /> */}
               <div className="blog-content">
                 <h3 className="blog-title">{post.title}</h3>
                 <div className="blog-date">
@@ -24,12 +35,9 @@ const Blog = () => {
                 </div>
                 <p className="blog-excerpt">{post.excerpt}</p>
                 <div className="blog-actions">
-                  <a href={post.link} className="button read-more">
+                  <Link to={`/blog/${post.id}`} className="button read-more">
                     Read More <FaArrowRight />
-                  </a>
-                  <button className="button share-button">
-                    <FaShareAlt /> Share
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

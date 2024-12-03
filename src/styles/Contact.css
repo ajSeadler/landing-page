@@ -19,18 +19,19 @@
 .contact-header p {
   font-size: 1.2rem;
   margin-bottom: 40px;
-  color: #a1a1a1;
+  color: #fff;
   text-align: center;
 }
 
 .contact-form-container {
   display: flex;
   justify-content: center;
+
   width: 100%;
 }
 
 .contact-form {
-  background: transparent;
+  background: #0E1116;
   padding: 30px;
   border-radius: 20px;
   border: solid 3px grey;

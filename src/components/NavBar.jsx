@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { FiHome, FiUser, FiFileText, FiCode, FiMail } from "react-icons/fi";
 import "../styles/NavBar.css";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -27,10 +28,10 @@ export default function NavBar() {
     <nav className={`navbar ${isVisible ? "visible" : "hidden"}`}>
       <ul className="nav-links">
         <li>
-          <a href="#home" className="nav-item">
+          <Link to="/" className="nav-item">
             <FiHome className="icon" />
             <span>Home</span>
-          </a>
+          </Link>
         </li>
         <li>
           <a href="#about" className="nav-item">

@@ -1,5 +1,13 @@
-/* eslint-disable react/no-unescaped-entities */
 import "../styles/About.css";
+import {
+  FaCode,
+  FaShieldAlt,
+  FaMountain,
+  FaCamera,
+  FaGamepad,
+  FaBookOpen,
+  FaGuitar,
+} from "react-icons/fa"; // Importing specific icons
 
 const About = () => {
   return (
@@ -20,6 +28,28 @@ const About = () => {
           possible. Take a look at some of my projects below!
         </p>
       </div>
+
+      <section className="hobbies">
+        <h3 className="hobbies-title">Hobbies & Interests</h3>
+        <ul className="hobbies-list">
+          <li>
+            <FaCode /> Web Development
+          </li>
+          <li>
+            <FaShieldAlt /> Cybersecurity
+          </li>
+          <li>
+            <FaMountain /> Outdoor Hiking
+          </li>
+
+          <li>
+            <FaGuitar /> Guitar
+          </li>
+          <li>
+            <FaBookOpen /> Reading: Sci-fi/Fantasy
+          </li>
+        </ul>
+      </section>
     </section>
   );
 };
