@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: center;
   width: auto;
-  margin: auto;
-  padding: 3rem 2rem;
+
+  padding: 2rem;
   background: #0E1116;
   /* border: solid 2px grey;
   border-radius: 20px; */
@@ -38,7 +38,7 @@
   line-height: 1.6;
   color: #b0b0b0;
   max-width: 800px;
-  text-align: left;
+  text-align: center;
   animation: fadeIn 1.8s ease;
 }
 
@@ -102,7 +102,7 @@
 
   .about-content {
     font-size: 1rem !important;
-    text-align: left;
+    text-align: center;
   }
 
   .hobbies-title {

@@ -71,7 +71,6 @@
 }
 
 .project-title {
-  font-size: 1.6rem;
   font-weight: bold;
   color: #d9ff00;
   margin-bottom: 1rem;
@@ -177,6 +176,10 @@
 @media (max-width: 798px) {
   .project-card {
     width: 100%;
+  }
+
+  .projects-animation {
+    width: 300px;
   }
 
   .project-image {
