@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai"; // Close icon
 import Lottie from "lottie-react";
-import projectsAnimation from "../assets/projects-animation.json"; // Import Lottie animation file
+import projectsAnimation from "../assets/projects-animation2.json"; // Import Lottie animation file
 import "../styles/Projects.css";
 
 const projects = [
