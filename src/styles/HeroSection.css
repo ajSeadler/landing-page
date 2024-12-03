@@ -13,6 +13,32 @@
   max-height: 100vh !important;
 }
 
+.hero-animation {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  opacity: 0;
+  /* Initially hidden */
+  animation: fadeIn 1.5s ease forwards;
+  /* Apply the fadeIn animation */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    /* Slight upward shift */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* Original position */
+  }
+}
+
+
 .hero-content {
   animation: fadeIn 1.5s ease;
 }

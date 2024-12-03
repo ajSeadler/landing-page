@@ -9,6 +9,7 @@
 .section-title {
   font-size: 2.5rem;
   font-weight: bold;
+  text-decoration: underline;
   margin-bottom: 3rem;
   color: #d9ff00;
 }

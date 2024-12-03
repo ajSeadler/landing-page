@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai"; // Close icon
+import Lottie from "lottie-react";
+import projectsAnimation from "../assets/projects-animation.json"; // Import Lottie animation file
 import "../styles/Projects.css";
 
 const projects = [
@@ -41,7 +43,10 @@ const Projects = () => {
 
   return (
     <section className="projects" id="projects">
-      <h2 className="section-title">My Projects</h2>
+      <h2 className="section-title">Projects</h2>
+      <div className="projects-animation">
+        <Lottie animationData={projectsAnimation} loop={true} />
+      </div>
       <div className="projects-list">
         {projects.map((project, index) => (
           <div key={index} className="project-card">

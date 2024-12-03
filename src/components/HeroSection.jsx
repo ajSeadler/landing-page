@@ -1,5 +1,6 @@
 import { FaJs, FaReact, FaNodeJs, FaPython, FaLinux } from "react-icons/fa";
 import { SiPostgresql, SiExpress, SiSqlite } from "react-icons/si";
+
 import "../styles/HeroSection.css";
 
 export default function HeroSection() {

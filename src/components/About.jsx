@@ -7,17 +7,22 @@ import {
   FaGamepad,
   FaBookOpen,
   FaGuitar,
-} from "react-icons/fa"; // Importing specific icons
+} from "react-icons/fa";
+import Lottie from "lottie-react";
+import techAnimation from "../assets/tech-animation2.json"; // Adjust path as needed// Importing specific icons
 
 const About = () => {
   return (
     <section className="about" id="about">
       <h2 className="about-title">About Me</h2>
+      <div className="hero-animation">
+        <Lottie animationData={techAnimation} loop={true} />
+      </div>
       <div className="about-content">
         <p>
           Hi there! I'm <strong>Anthony Seadler</strong>, though most people
           call me AJ. I'm a full-stack developer with a Web Development
-          certification from the University of Oklahoma and Fullstack Academy.
+          certificate from the University of Oklahoma and Fullstack Academy.
           Currently, I’m pursuing a Bachelor of Science in Cybersecurity at
           Southern Nazarene University, combining my passion for development
           with a strong focus on security.
