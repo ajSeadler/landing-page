@@ -14,15 +14,17 @@
   z-index: 1000;
 
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .navbar.hidden {
   transform: translateY(-100%);
+  opacity: 0;
 }
 
 .navbar.visible {
   transform: translateY(0);
+  opacity: 1;
 }
 
 .nav-links {
@@ -49,15 +51,11 @@
 }
 
 .nav-item.active {
-
   color: #ffcc00;
-
-
 }
 
 .nav-item.active .icon {
   color: #ff3300;
-
 }
 
 .icon {

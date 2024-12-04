@@ -7,15 +7,24 @@ export default function NavBar() {
   const [isVisible, setIsVisible] = useState(true);
   const [activeLink, setActiveLink] = useState("home");
   const lastScrollY = useRef(window.scrollY);
+  const scrollThreshold = 50; // Define scroll threshold
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY.current) {
-        setIsVisible(true); // false if you want to hide nav bar
-      } else {
-        setIsVisible(true); // Show navbar on scroll up.
+      const currentScrollY = window.scrollY;
+
+      if (Math.abs(currentScrollY - lastScrollY.current) < scrollThreshold) {
+        // Ignore small scroll changes below the threshold
+        return;
       }
-      lastScrollY.current = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current) {
+        setIsVisible(false); // Hide navbar on significant scroll down
+      } else {
+        setIsVisible(true); // Show navbar on significant scroll up
+      }
+
+      lastScrollY.current = currentScrollY; // Update the last scroll position
     };
 
     window.addEventListener("scroll", handleScroll);
