@@ -6,9 +6,28 @@ import { Link } from "react-router-dom";
 export default function NavBar() {
   const [isVisible, setIsVisible] = useState(true);
   const [activeLink, setActiveLink] = useState("home");
+  const [currentTime, setCurrentTime] = useState(""); // State for current time
   const lastScrollY = useRef(window.scrollY);
   const scrollThreshold = 50; // Define scroll threshold
 
+  // Update time every second
+  useEffect(() => {
+    const updateClock = () => {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = now.getMinutes().toString().padStart(2, "0");
+      const ampm = hours >= 12 ? "PM" : "AM"; // Determine AM/PM
+      hours = hours % 12 || 12; // Convert to 12-hour format
+      setCurrentTime(`${hours}:${minutes} ${ampm}`);
+    };
+
+    updateClock(); // Initialize on mount
+    const interval = setInterval(updateClock, 1000); // Update every second
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
+  // Handle scroll visibility
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -86,6 +105,7 @@ export default function NavBar() {
           </a>
         </li>
       </ul>
+      <div className="current-time">{currentTime}</div>
     </nav>
   );
 }

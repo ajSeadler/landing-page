@@ -24,8 +24,8 @@ const About = () => {
           call me AJ. I'm a full-stack developer with a Web Development
           certificate from the University of Oklahoma and Fullstack Academy.
           Currently, I’m pursuing a Bachelor of Science in Cybersecurity at
-          Southern Nazarene University, combining my passion for development
-          with a strong focus on security.
+          Southern Nazarene University, combining my development experience with
+          a strong focus on security.
         </p>
         <p>
           With experience in backend and frontend practices, I bring a keen eye

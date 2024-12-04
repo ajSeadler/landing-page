@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 40%;
   margin: auto;
@@ -15,6 +15,13 @@
 
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.current-time {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  font-weight: bold;
+  margin-left: auto;
 }
 
 .navbar.hidden {
@@ -77,12 +84,17 @@
     padding: 1rem;
   }
 
+  .current-time {
+    font-size: 1rem;
+  }
+
+
   .nav-links {
     gap: 1rem !important;
   }
 
   .nav-item {
-    font-size: 0.9rem !important;
+    font-size: .8rem !important;
   }
 
   .icon {
