@@ -1,5 +1,12 @@
 import { useEffect, useState, useRef } from "react";
-import { FiHome, FiUser, FiFileText, FiCode, FiMail } from "react-icons/fi";
+import {
+  FiHome,
+  FiUser,
+  FiFileText,
+  FiCode,
+  FiMail,
+  FiMenu,
+} from "react-icons/fi";
 import "../styles/NavBar.css";
 import { Link } from "react-router-dom";
 
@@ -7,6 +14,7 @@ export default function NavBar() {
   const [isVisible, setIsVisible] = useState(true);
   const [activeLink, setActiveLink] = useState("home");
   const [currentTime, setCurrentTime] = useState(""); // State for current time
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State for mobile menu toggle
   const lastScrollY = useRef(window.scrollY);
   const scrollThreshold = 50; // Define scroll threshold
 
@@ -57,12 +65,22 @@ export default function NavBar() {
 
   return (
     <nav className={`navbar ${isVisible ? "visible" : "hidden"}`}>
-      <ul className="nav-links">
+      <div
+        className="menu-icon"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+        {/* Hamburger menu icon */}
+        <FiMenu />
+      </div>
+      <ul className={`nav-links ${isMobileMenuOpen ? "mobile-open" : ""}`}>
         <li>
           <Link
             to="/"
             className={`nav-item ${activeLink === "home" ? "active" : ""}`}
-            onClick={() => setActiveLink("home")}
+            onClick={() => {
+              setActiveLink("home");
+              setIsMobileMenuOpen(false);
+            }}
           >
             <FiHome className="icon" />
             <span>Home</span>
@@ -72,7 +90,10 @@ export default function NavBar() {
           <a
             href="#about"
             className={`nav-item ${activeLink === "about" ? "active" : ""}`}
-            onClick={() => setActiveLink("about")}
+            onClick={() => {
+              setActiveLink("about");
+              setIsMobileMenuOpen(false);
+            }}
           >
             <FiUser className="icon" />
             <span>About</span>
@@ -82,7 +103,10 @@ export default function NavBar() {
           <a
             href="#projects"
             className={`nav-item ${activeLink === "projects" ? "active" : ""}`}
-            onClick={() => setActiveLink("projects")}
+            onClick={() => {
+              setActiveLink("projects");
+              setIsMobileMenuOpen(false);
+            }}
           >
             <FiCode className="icon" />
             <span>Projects</span>
@@ -92,7 +116,10 @@ export default function NavBar() {
           <a
             href="#blog"
             className={`nav-item ${activeLink === "blog" ? "active" : ""}`}
-            onClick={() => setActiveLink("blog")}
+            onClick={() => {
+              setActiveLink("blog");
+              setIsMobileMenuOpen(false);
+            }}
           >
             <FiFileText className="icon" />
             <span>Blog</span>
@@ -102,7 +129,10 @@ export default function NavBar() {
           <a
             href="#contact"
             className={`nav-item ${activeLink === "contact" ? "active" : ""}`}
-            onClick={() => setActiveLink("contact")}
+            onClick={() => {
+              setActiveLink("contact");
+              setIsMobileMenuOpen(false);
+            }}
           >
             <FiMail className="icon" />
             <span>Contact</span>
