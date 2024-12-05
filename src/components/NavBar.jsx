@@ -18,7 +18,11 @@ export default function NavBar() {
       const minutes = now.getMinutes().toString().padStart(2, "0");
       const ampm = hours >= 12 ? "PM" : "AM"; // Determine AM/PM
       hours = hours % 12 || 12; // Convert to 12-hour format
-      setCurrentTime(`${hours}:${minutes} ${ampm}`);
+      setCurrentTime(
+        <>
+          {hours}:{minutes} <span className="ampm">{ampm}</span>
+        </>
+      );
     };
 
     updateClock(); // Initialize on mount
