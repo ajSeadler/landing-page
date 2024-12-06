@@ -41,6 +41,7 @@
 
 .hero-content {
   animation: fadeIn 1.5s ease;
+  height: 50%;
 }
 
 .hero-title {

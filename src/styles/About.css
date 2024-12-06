@@ -4,8 +4,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: auto;
-  margin: auto;
+  width: 100% !important;
+  margin: auto !important;
   padding: 1rem;
   /* border: solid 2px grey;
   border-radius: 20px; */
@@ -35,6 +35,7 @@
 .about-content {
   font-size: 1.2rem;
   line-height: 1.6;
+  margin: auto !important;
   color: #b0b0b0;
   max-width: 800px;
   text-align: center;
@@ -57,7 +58,8 @@
   background: #1a1f24;
   border-radius: 15px;
   width: 48vw;
-  border: solid 2px #444;
+  margin: auto;
+  border: solid 2px grey;
   animation: fadeIn 2s ease;
 }
 
