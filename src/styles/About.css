@@ -56,14 +56,13 @@
   padding: 2rem;
   background: #1a1f24;
   border-radius: 15px;
-  width: 100%;
-  max-width: 900px;
+  width: 48vw;
   border: solid 2px #444;
   animation: fadeIn 2s ease;
 }
 
 .hobbies-title {
-  font-size: 2rem;
+
   font-weight: bold;
   color: #d9ff00;
   margin-bottom: 1.5rem;
@@ -74,7 +73,7 @@
   list-style: none;
   padding: 0;
   color: #b0b0b0;
-  font-size: 1.2rem;
+
   text-align: center;
 }
 
@@ -103,9 +102,11 @@
     text-align: center;
   }
 
-  .hobbies-title {
-    font-size: 1.8rem;
+  .hobbies {
+    width: 90vw;
   }
+
+
 }
 
 @media (max-width: 480px) {
@@ -117,9 +118,7 @@
     font-size: 0.9rem;
   }
 
-  .hobbies-title {
-    font-size: 1.5rem;
-  }
+
 }
 
 /* Fade-In Animation */
